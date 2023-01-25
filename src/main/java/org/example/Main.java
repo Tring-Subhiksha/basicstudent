@@ -1,11 +1,12 @@
 package org.example;
 import java.util.*;
 class Student{
-    public String stuname;
-    public String grade;
-    public double gpa;
-    public double gradeValue;
-    public double credit,mark;
+    String stuname;
+    String grade;
+    double gpa;
+    double gradeValue;
+    double credit;
+    double mark;
     Student(){
         Scanner sc=new Scanner(System.in);
         System.out.println("\nEnter Your Name:");
