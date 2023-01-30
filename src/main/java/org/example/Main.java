@@ -8,6 +8,7 @@ class Student{
     double gradeValue;
     double credit;
     double mark;
+    Logger l = Logger.getLogger("com.api.jar");
     Student(){
         Scanner sc=new Scanner(System.in);
         l.info("\nEnter Your Name:");
