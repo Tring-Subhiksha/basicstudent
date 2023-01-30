@@ -1,5 +1,6 @@
 package org.example;
 import java.util.*;
+import java.util.logging.*;
 class Student{
     String stuname;
     String grade;
@@ -9,18 +10,18 @@ class Student{
     double mark;
     Student(){
         Scanner sc=new Scanner(System.in);
-        System.out.println("\nEnter Your Name:");
+        l.info("\nEnter Your Name:");
         stuname=sc.nextLine();
-        System.out.println("\nEnter the Grade level:");
+        l.info("\nEnter the Grade level:");
         grade=sc.nextLine();
 
-        System.out.println("\nEnter the Credit points:");
+        l.info("\nEnter the Credit points:");
         credit=sc.nextDouble();
     }
     String showdetails()
     {
-        System.out.println("\nStudent Name:" +stuname);
-        System.out.println("\nGrade Level:" +grade);
+        l.log(Level.INFO, () ->"\nStudent Name:" +stuname);
+        l.log(Level.INFO, () ->"\nGrade Level:" +grade);
         return stuname+" has a "+gpa+" GPA";
     }
     void checkgrade(){
@@ -34,7 +35,7 @@ class Student{
             case "B-" -> gradeValue = 2.67;
             case "C+" -> gradeValue = 2.33;
             case "C" -> gradeValue = 2.00;
-            default -> System.out.println("Invalid Grade");
+            default -> l.info("Invalid Grade");
         }
     }
     void updategpa(){
@@ -47,7 +48,7 @@ class Student{
 
         s.checkgrade();
         s.updategpa();
-        System.out.println(s.showdetails());
+        l.info(s.showdetails());
 
     }
 }
