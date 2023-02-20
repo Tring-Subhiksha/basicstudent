@@ -43,7 +43,8 @@ class Student{
         mark=gradeValue*credit;
         gpa=mark/credit;
     }
-
+}
+class Basicstudent{
     public static void main(String[] args){
         Student s=new Student();
 
