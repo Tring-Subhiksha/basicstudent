@@ -8,7 +8,7 @@ class Student{
     double gradeValue;
     double credit;
     double mark;
-    static Logger l = Logger.getLogger("com.api.jar");
+     Logger l = Logger.getLogger("com.api.jar");
     Student(){
         Scanner sc=new Scanner(System.in);
         l.info("\nEnter Your Name:");
@@ -46,7 +46,7 @@ class Student{
 
     public static void main(String[] args){
         Student s=new Student();
-
+        Logger l = Logger.getLogger("com.api.jar");
         s.checkgrade();
         s.updategpa();
         l.info(s.showdetails());
