@@ -49,7 +49,7 @@ class Student{
         Logger l = Logger.getLogger("com.api.jar");
         s.checkgrade();
         s.updategpa();
-        l.info(s.showdetails());
+        l.log(Level.INFO, () ->" "+s.showdetails());
 
     }
 }
